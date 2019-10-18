@@ -1,8 +1,11 @@
 import React from 'react';
+import "./style.css";
 
 function Portfolio() {
   return (
-    <h1>Porfolio</h1>
+    <div id="portfolio-container">
+      <h1>Porfolio</h1>
+    </div>
   )
 }
 

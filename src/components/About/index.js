@@ -1,8 +1,11 @@
 import React from 'react';
+import "./style.css";
 
 function About() {
   return (
-    <h1>About</h1>
+    <div id="about-container">
+      <h1>About</h1>
+    </div>
   )
 }
 
