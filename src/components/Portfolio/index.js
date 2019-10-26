@@ -1,12 +1,37 @@
-import React from 'react';
+import React,  { useState } from "react";
+import {
+  BrowserRouter as Router,
+  withRouter,
+  Switch,
+  Route,
+  Link,
+  useHistory,
+  useLocation,
+  useParams
+} from "react-router-dom";
 import "./style.css";
+import { ModalLink } from "react-router-modal-gallery";
+import projects from "../../projects.json"
 
-function Portfolio() {
+
+class Portfolio extends React.Component {
+
+render() {
   return (
-    <div id="portfolio-container">
-      <h1>Porfolio</h1>
-    </div>
-  )
+    <div id="portfolio">
+      {projects.map(i => (
+        <ModalLink
+          key={i.id}
+          to={{
+            pathname: `/:${i.id}`
+          }}
+        >
+          <p>{i.title}</p>
+        </ModalLink>
+      ))}
+      </div>
+  );
+ }
 }
 
-export default Portfolio;
+export default Portfolio

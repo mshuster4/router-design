@@ -1,0 +1,39 @@
+
+ [   
+   {
+        "id": 0,     
+        "title": "Block Party",
+        "tagline": "Neighborhood bulletin board for buying, selling, and promoting"
+    
+    },
+    {
+        "id": 1,      
+        "title": "Reading Wishlist",
+        "tagline": "Search engine for discovering and saving books"
+
+    },
+    {   "id": 2,
+        "title": "Friend Finder",
+        "tagline": "Survey designed to connect people based on their personal values"
+
+    },
+    {
+        "id": 3,
+        "title": "Campwannagetajob",
+        "tagline": "Collection of games created to sharpen critical thinking and job interview skills"
+
+    },
+    {
+        "id": 4,
+        "title": "Brews & Beats",
+        "tagline": " Entertainment calendar made to ease the stress of planning a night out."
+
+    },
+    {
+        "id": 5,
+        "title": "Mongo News Scraper",
+        "tagline": "Displays the latest in Music News and Commentary"
+
+    }
+
+]

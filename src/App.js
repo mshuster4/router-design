@@ -1,42 +1,33 @@
-import React, { Component } from 'react';
-import Landing from "./components/Landing";
-import Portfolio from "./components/Portfolio";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import './App.css';
-import {
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import React from "react";
+import { HashLink as Link } from 'react-router-hash-link';
+import Routes from "./Routes";
 
-
-class App extends Component {
-
-  render() {
-    return(
-       <div>
-      <ul class="nav">
-          <li>
-            <Link to="/landing">Landing</Link>
-          </li>
-          <li>
-            <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-      </ul>
-        <Landing/>
-        <Portfolio/>
-        <About/>
-        <Contact/>
-      </div>
-    )
-  }
+function Menu() {
+ return(
+   <ul>
+     <li>
+       <Link to="/#landing">Landing</Link>
+     </li>
+     <li>
+      <Link to="/#portfolio">Portfolio</Link>
+     </li>
+     <li>
+       <Link to="/#about">About</Link>
+     </li>
+      <li>
+       <Link to="/#contact">Contact</Link>
+     </li>
+   </ul>
+ );
 }
 
-export default App
+function App() {
+  return (
+  <div>
+    <Menu/>
+    <Routes/>
+  </div>
+  )
+}
+
+export default App;
