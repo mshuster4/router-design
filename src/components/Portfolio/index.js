@@ -23,7 +23,7 @@ render() {
         <ModalLink
           key={i.id}
           to={{
-            pathname: `/:${i.id}`
+            pathname: `/portfolio:${i.id}`
           }}
         >
           <p>{i.title}</p>

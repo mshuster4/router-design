@@ -1,46 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Portfolio from "./components/Portfolio";
 import Project from "./components/Project";
-import Landing from "./components/Landing";
-import About from "./components/About";
 import ProjectModal from "./components/Modal"
-import Contact from "./components/Contact";
-import { HashLink as Link } from 'react-router-hash-link';
 import { ModalSwitch, ModalRoute } from "react-router-modal-gallery";
+import ScrollView from "./ScrollView";
 import {
-  BrowserRouter as Router,
-  Switch,
   Route, 
   Redirect,
-  withRouter,
-  useHistory,
-  useLocation,
-  useParams
 } from "react-router-dom";
 
-
-function ScrollView() {
-
-  return (
-    <div>
-      <Landing/>
-      <About/>
-      <Portfolio/>
-      <Contact/>
-    </div>
-  );
-}
 
 const routes = [
   {
     exact: true,
-    path: '/',
-    component: ScrollView
+    path: '/portfolio',
+    component: Portfolio
   },
   {
-    defaultParentPath: '/',
+    defaultParentPath: '/portfolio',
     modal: true,
-    path: '/:id',
+    path: '/portfolio:id',
     component: Project
   },
   {
@@ -55,6 +34,8 @@ const modalRoutes = routes
   .map(route => <ModalRoute key={route.path} {...route} />);
 
 const Routes = () => (
+ <div>
+  <Route exact path="/" component={ScrollView} />
   <ModalSwitch
     renderModal={({ open, redirectToBack }) => (
       <ProjectModal open={open} onExited={redirectToBack}>
@@ -70,6 +51,7 @@ const Routes = () => (
       )
     )}
   </ModalSwitch>
+ </div>
 );
 
 export default Routes;

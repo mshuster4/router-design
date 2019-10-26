@@ -24,7 +24,7 @@ function ProjectModal({ children, open, onExited, ...rest }) {
       open={showModal}
       onClose={startExitAnimation}
       onExited={onExitAnimationEnd}
-    >
+     >
       <DialogContent>{children}</DialogContent>
     </Dialog>
   );
