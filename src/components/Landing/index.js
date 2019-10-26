@@ -3,9 +3,9 @@ import "./style.css";
 
 function Landing() {
   return (
-    <div id="landing">
+    <section id="landing">
       <h1>Landing</h1>
-    </div>
+    </section>
   )
 }
 

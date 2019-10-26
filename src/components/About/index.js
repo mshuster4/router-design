@@ -3,9 +3,9 @@ import "./style.css";
 
 function About() {
   return (
-    <div id="about">
+    <section id="about">
       <h1>About</h1>
-    </div>
+    </section>
   )
 }
 

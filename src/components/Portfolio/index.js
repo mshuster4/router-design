@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import "./style.css";
 import { ModalLink } from "react-router-modal-gallery";
+import NavBar from "../NavBar";
 import projects from "../../projects.json"
 
 
@@ -18,7 +19,7 @@ class Portfolio extends React.Component {
 
 render() {
   return (
-    <div id="portfolio">
+    <section id="portfolio">
       {projects.map(i => (
         <ModalLink
           key={i.id}
@@ -29,7 +30,7 @@ render() {
           <p>{i.title}</p>
         </ModalLink>
       ))}
-      </div>
+      </section>
   );
  }
 }

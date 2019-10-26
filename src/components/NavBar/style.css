@@ -1,11 +1,16 @@
-.nav-bg-1 {
-    background-color: black;
-    border-bottom: 1px solid hsl(0, 0%, 45%);
-    box-shadow: 0px 1px 10px 0px #737373;
-    color: white !important;
- }
- 
- .nav-bg-2 {
+.is-current {
+  color:  #34cb99;
+  font-weight: bold;
+}
+
+.nav-bg {
+  background-color: black;
+  border-bottom: 1px solid hsl(0, 0%, 45%);
+  box-shadow: 0px 1px 10px 0px #737373;
+  color: white !important;
+}
+
+.nav-bg-2 {
     background-color: white;
     border-bottom: 1px solid #737373;
     box-shadow: 0px 1px 10px 0px #737373;
@@ -19,22 +24,15 @@
     color: black !important;
  }
  
- 
  .nav-link {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
  }
- 
- .active {
-    color: #34cb99 !important;
- }
- 
- 
+
  .nav-link:hover {
     color: #34cb99 !important;
  }
- 
- 
+
  @media only screen and (max-width: 600px) {
 
     .navbar {
@@ -106,5 +104,4 @@
  
   
  } 
- 
  
