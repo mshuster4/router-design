@@ -3,105 +3,15 @@
   font-weight: bold;
 }
 
-.nav-bg {
-  background-color: black;
-  border-bottom: 1px solid hsl(0, 0%, 45%);
-  box-shadow: 0px 1px 10px 0px #737373;
-  color: white !important;
+ .navbar {
+  box-shadow: 0 2px 5px 0 rgba(255, 252, 252, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+ }
+
+ #nav-items ul {
+   margin: 0;
 }
 
-.nav-bg-2 {
-    background-color: white;
-    border-bottom: 1px solid #737373;
-    box-shadow: 0px 1px 10px 0px #737373;
-    color: black !important;
- }
- 
- .nav-bg-3 {
-    background-color: rgb(243,243,243);
-    border-bottom: 1px solid #737373;
-    box-shadow: 0px 1px 10px 0px #737373;
-    color: black !important;
- }
- 
- .nav-link {
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
+ #nav-items a {
+   padding-left: 15px;
  }
 
- .nav-link:hover {
-    color: #34cb99 !important;
- }
-
- @media only screen and (max-width: 600px) {
-
-    .navbar {
-        padding: 0 !important 
-    }
- 
-    .d-sm-inline-flex.ml-sm-auto.navbar-nav {
-        width: 100%
-    }
- 
-    .nav-bg {
-        justify-content: center;
-    }
- 
-    .nav-item-1 {
-        width: 33.33%;
-        border-right: solid white 1px;
-        text-align: center;
-    }
- 
-    .nav-item-2 {
-       width: 33.33%;
-        border-right: solid white 1px;
-        text-align: center;
-       border-right: solid black 1px;
-    }
- 
-    .nav-item:last-of-type {
-        border-right: none;
-    }
- 
- }
-    
- 
- @media only screen and (min-width: 600px) {
- 
-    .nav-bg {
-        align-items: center;
-        padding: 0px 15px 0px 15px;
-    }
- 
-    .nav-pages {
-        margin-left: auto;
-    }
- 
-    a.nav-link {
-        font-family: Arial, Helvetica, sans-serif;
-        text-decoration: none;
-    }
- 
-   .nav-item {
-       padding: 0 1rem 0 0 ;
-   }
-   
- } 
- 
- @media only screen and (min-width: 768px) {
-    
- 
-    .nav-bg {
-        align-items: center;
-        padding: 0px 15px 0px 15px;
-    }
- 
-    .nav-pages {
-        margin-left: auto;
-    }
- 
- 
-  
- } 
- 

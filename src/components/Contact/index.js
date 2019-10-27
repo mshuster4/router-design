@@ -3,9 +3,9 @@ import "./style.css";
 
 function Contact() {
   return (
-    <div id="contact">
+    <section id="contact">
       <h1>Contact</h1>
-    </div>
+    </section>
   )
 }
 

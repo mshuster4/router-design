@@ -15,24 +15,19 @@ import NavBar from "../NavBar";
 import projects from "../../projects.json"
 
 
-class Portfolio extends React.Component {
+const Portfolio = () => {
 
-render() {
   return (
     <section id="portfolio">
-      {projects.map(i => (
-        <ModalLink
-          key={i.id}
-          to={{
-            pathname: `/portfolio:${i.id}`
-          }}
-        >
-          <p>{i.title}</p>
+      {projects.map(project => (
+        <div key={project.id}>
+        <ModalLink to={`/projects/${project.id}`}>
+          <p>{project.title}</p>
         </ModalLink>
+        </div>
       ))}
       </section>
   );
  }
-}
 
 export default Portfolio

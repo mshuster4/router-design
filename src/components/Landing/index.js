@@ -1,6 +1,8 @@
 import React from 'react';
 import "./style.css";
 
+
+
 function Landing() {
   return (
     <section id="landing">
