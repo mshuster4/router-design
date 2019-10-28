@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 
-const About = (props) => {
+const About = () => {
   return (
     <div id="about">
       <h1>About</h1>

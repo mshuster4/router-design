@@ -1,157 +1,56 @@
 
-#root {
-  height: 100%; 
+.nav-bg-landing {
+    background-color: black !important;
 }
 
-#landing {
-  background-color: black;
+.nav-bg-landing a {
+  color: white !important;
+  font-weight: bold;
 }
 
-#portfolio {
-  background-color: white;
+.nav-bg-landing a.App-navigation-item--active {
+    font-weight: bold;
+    color: green !important;
 }
 
-#about {
-  background-color: rgb(243,243,243);
+.nav-bg-portfolio {
+    background-color: white !important;
 }
 
-#contact {
-  background-color: white;
+.nav-bg-portfolio a {
+  color: black !important;
+  font-weight: bold;
 }
 
-.landing-container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  color: white;
+.nav-bg-portfolio a.App-navigation-item--active {
+    font-weight: bold;
+    color: green !important;
 }
 
-.portfolio-container {
-  max-width: 83%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.nav-bg-about {
+    background-color: green !important;
 }
 
-.about-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.nav-bg-about a {
+  color: black !important;
+  font-weight: bold;
 }
 
-.contact-content {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.nav-bg-about a.App-navigation-item--active {
+    font-weight: bold;
+    color: yellow !important;
 }
 
-
-.modal-backdrop.show {
-  opacity: 0.95;
-  height: 100%;
+.nav-bg-contact {
+    background-color: purple !important;
 }
 
-.modal.fade.top.show {
-  padding-top: 4rem; 
+.nav-bg-contact a {
+  color: black !important;
+  font-weight: bold;
 }
 
-.modal-title {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  width: 100%;
+.nav-bg-contact a.App-navigation-item--active {
+    font-weight: bold;
+    color: yellow !important;
 }
-
-.modal-tag {
-  margin-bottom: 0;
-}
-
-
-a.btn-outline-black.btn.Ripple-parent.modal-link.btn-md {
-    padding: 10px 17px;
-}
-
-.accent-color{
-  color: #31cb97;
-}
-
-.card {
-  border: 1px solid #31cb97;
-}
-
-.card-header {
-  text-align: center;
-  background-color: white;
-  border-bottom: 1px dashed #31cb97;
-  font-size: 1.5rem;
-}
-
-
-@media only screen and (min-width: 320px) {
-  .portfolio-page {
-     padding: 2rem 0 2rem 0;
-  }
-
-  .about-page {
-    padding: 1rem 0 1rem 0;
-  }
-
-  .contact-content {
-    padding: 0 1rem 0 1rem;
-  }
-
-  .contact-container {
-    padding: 2rem 0 2rem 0;
-  }
-
-  body.modal-open {
-    overflow-y: hidden;
-    width: 96%;
-  }     
-}
-
-@media only screen and (min-width: 600px) {
-  .portfolio-page {
-    padding: 1rem 0 1rem 0;
- }
-
- .about-page {
-   padding: 0;
- }
-
- .contact-container {
-   padding: 2rem 0 0 0;
- }
-
-body.modal-open {
-  width: 100%;
-}
-   
-}
-
-
-
-@media only screen and (min-width: 768px) {
-  .portfolio-page {
-    padding: 0;
-  }
-
-     
-  .modal.fade.top.show {
-    padding-top: 2rem; 
- }
-
-}
-
-
-@media only screen and (min-width: 992px) {
-  .landing-container {
-    display: block;
-  }
-
-} 

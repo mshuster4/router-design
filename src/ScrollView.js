@@ -7,6 +7,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import About from "./components/About";
 import Contact from "./components/Contact";
 import useScrollSpy from 'react-use-scrollspy';
+import "./App.css"
 
 const ScrollView = () => {
 
@@ -23,14 +24,25 @@ const ScrollView = () => {
   })
 
   const setNavbg = (section) => {
-    console.log(section)
-  }
+   if (section === 0) {
+     return "nav-bg-landing"
+   }
+   else if (section === 1) {
+     return "nav-bg-portfolio"
+   }
+   else if (section === 2) {
+     return "nav-bg-about"
+   }
+   else {
+     return "nav-bg-contact"
+   }
+}
 
   return (
 
     <div>
       <NavBar
-        style={setNavbg(activeSection)}
+        className={setNavbg(activeSection)}
       >
         <Nav>
           <NavLink 

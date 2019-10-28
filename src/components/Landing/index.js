@@ -3,12 +3,12 @@ import "./style.css";
 
 
 
-function Landing(props) {
+function Landing() {
 
   return (
-    <section id="landing">
+    <div id="landing">
       <h1>Landing</h1>
-    </section>
+    </div>
   )
 }
 
