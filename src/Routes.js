@@ -20,7 +20,7 @@ const routes = [
   {
     defaultParentPath: '/portfolio',
     modal: true,
-    path: '/projects/:id',
+    path: '/portfolio/:id',
     component: Project
   },
   {

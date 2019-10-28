@@ -1,51 +1,48 @@
-import React from "react";
+import React, { useRef } from "react";
 import { NavHashLink as NavLink } from 'react-router-hash-link'
 import { useState, useEffect } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
-import Scrollspy from 'react-scrollspy';
 import "./style.css";
 
 
+
+
 function NavBar(props) {
-  
+
   return (
-    <Navbar fixed="top" className="nav-bg">
+    <Navbar fixed="top" className={props.className}>
     <Nav>
        <NavLink 
           smooth
           to="/#landing" 
+          activeClassName={props.linkClassName}
         >
           Home
         </NavLink>
     </Nav>
      <Nav className="ml-auto" id="nav-items">
-      <Scrollspy items={ ['landing','portfolio', 'about', 'contact'] } currentClassName="is-current" className="spy-navs" isScrolledPast={(items) => { console.log(items)}}>
-        <NavLink 
-          smooth
-          to="/" 
-          className="d-none nav-link"
-        >
-          Home
-        </NavLink>
         <NavLink 
           smooth
           to="/#portfolio" 
+          activeClassName={props.linkClassName}
+                  
         >
           Portfolio
         </NavLink>
         <NavLink 
           smooth
-          to="/#about" 
+          to="/#about"
+          activeClassName={props.linkClassName} 
                     >
             About
         </NavLink>
         <NavLink 
           smooth
           to="/#contact" 
+          activelassName={props.linkClassName}
         >
         Contact
         </NavLink>
-      </Scrollspy>
      </Nav>
     </Navbar>
 

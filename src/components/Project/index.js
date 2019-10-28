@@ -7,10 +7,9 @@ import {
 } from "react-router-dom";
 
 const getProjectById = projectId => {
-  const allProjects = getAllProjects();
-  const project = allProjects.find(project => project.id === projectId);
-  console.log(project)
-  return(project);
+  const allProjects=getAllProjects();
+  console.log("here", allProjects);
+  return allProjects[parseInt(projectId, 6)]
 };
 
 const getAllProjects = () => {
@@ -29,15 +28,13 @@ const Project = () => {
 
  console.log(id);
 
- let projectId = projects[parseInt(id, 10)];
-
- const project = getProjectById(projectId);
+ const project = getProjectById(id);
 
   console.log(project);
   
   return (
    <div>
-     <p>{project}</p>
+     <p>{project.title}</p>
    </div>
   );
  }

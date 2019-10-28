@@ -1,4 +1,4 @@
-import React,  { useState } from "react";
+import React,  { useState, useRef } from "react";
 import {
   BrowserRouter as Router,
   withRouter,
@@ -11,22 +11,21 @@ import {
 } from "react-router-dom";
 import "./style.css";
 import { ModalLink } from "react-router-modal-gallery";
-import NavBar from "../NavBar";
 import projects from "../../projects.json"
 
 
 const Portfolio = () => {
 
   return (
-    <section id="portfolio">
+    <div id="portfolio">
       {projects.map(project => (
         <div key={project.id}>
-        <ModalLink to={`/projects/${project.id}`}>
+        <ModalLink to={`/portfolio/${project.id}`}>
           <p>{project.title}</p>
         </ModalLink>
         </div>
       ))}
-      </section>
+      </div>
   );
  }
 

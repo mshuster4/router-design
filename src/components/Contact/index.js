@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useRef }from 'react';
 import "./style.css";
 
-function Contact() {
+const Contact = () => {
+
   return (
-    <section id="contact">
+    <div id="contact">
       <h1>Contact</h1>
-    </section>
+    </div>
   )
 }
 

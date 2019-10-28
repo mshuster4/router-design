@@ -1,11 +1,11 @@
 import React from 'react';
 import "./style.css";
 
-function About() {
+const About = (props) => {
   return (
-    <section id="about">
+    <div id="about">
       <h1>About</h1>
-    </section>
+    </div>
   )
 }
 
