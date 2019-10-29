@@ -6,7 +6,7 @@ import "./style.css";
 function Landing() {
 
   return (
-    <div id="landing">
+    <div>
       <h1>Landing</h1>
     </div>
   )

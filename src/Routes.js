@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from "./components/NavBar";
-import Portfolio from "./components/Portfolio";
+import Portfolio from "./pages/Portfolio";
 import Project from "./components/Project";
 import ProjectModal from "./components/Modal"
 import { ModalSwitch, ModalRoute } from "react-router-modal-gallery";

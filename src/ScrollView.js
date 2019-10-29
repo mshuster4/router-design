@@ -1,9 +1,11 @@
 import React, { Component, useRef} from 'react';
 import Landing from "./components/Landing";
-import Portfolio from "./components/Portfolio";
+import Portfolio from "./pages/Portfolio";
 import NavBar from "./components/NavBar";
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { Nav, Navbar } from 'react-bootstrap';
+import LogoLight from "./assets/images/ms-logo-light.png";
+import LogoDark from "./assets/images/ms-logo-dark.png";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import useScrollSpy from 'react-use-scrollspy';
@@ -50,7 +52,7 @@ const ScrollView = () => {
               to="/#landing" 
               activeClassName={activeSection === 0  ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}
             >
-              Home
+              <img id="logo" alt="ms-logo" src={activeSection === 0 ? LogoLight : LogoDark} />
           </NavLink>
        </Nav>
        <Nav className="ml-auto" id="nav-items">
@@ -78,16 +80,16 @@ const ScrollView = () => {
         </NavLink>
      </Nav>
     </NavBar>
-      <section ref={sectionsRefs[0]}>
+      <section id="landing" ref={sectionsRefs[0]}>
         <Landing/>
       </section>
-      <section ref={sectionsRefs[1]}>
+      <section id="portfolio" ref={sectionsRefs[1]}>
         <Portfolio/>
       </section>
-      <section ref={sectionsRefs[2]}>
+      <section id="about" ref={sectionsRefs[2]}>
         <About/>
       </section>
-      <section ref={sectionsRefs[3]}>
+      <section id="contact" ref={sectionsRefs[3]}>
         <Contact/>
       </section>
     </div>

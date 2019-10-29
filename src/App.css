@@ -1,3 +1,10 @@
+/*  ==== GLOBAL ===== */
+
+#root {
+  min-height: 100vh; 
+}
+
+/* ==== NAVIGATION ===== */
 
 .nav-bg-landing {
     background-color: black !important;
@@ -54,3 +61,53 @@
     font-weight: bold;
     color: yellow !important;
 }
+
+#logo{
+    width: 50px;
+    height: auto;
+}
+
+/* ===== LAYOUT ===== */
+
+#landing {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+}
+
+#portfolio {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: black;
+}
+
+#about {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: green;
+  color: white;
+}
+
+#contact {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: purple;
+  color: white;
+}
+
+
