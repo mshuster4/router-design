@@ -1,1 +1,23 @@
+h6.project-text {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
+.view {
+  border-radius: 4px;
+}
+
+#portfolio a {
+  text-decoration: none;
+  color: #32ca96;
+}
+
+.overlay .mask {
+    opacity: 0;
+    transition: all 0.5s ease-in-out !important;
+}
+
+.rgba-black-strong {
+    background-color: rgba(0, 0, 0, 1.0) !important;
+}

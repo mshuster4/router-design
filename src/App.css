@@ -4,6 +4,13 @@
   min-height: 100vh; 
 }
 
+button.btn-outline-success,
+button.btn-outline-success:hover
+ {
+  border: 2px solid #32ca96 !important;
+  color: #32ca96 !important;
+}
+
 /* ==== NAVIGATION ===== */
 
 .nav-bg-landing {
