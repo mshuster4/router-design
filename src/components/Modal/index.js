@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Dialog, DialogContent } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
+import { Dialog, useMediaQuery } from '@material-ui/core';
+import "./style.css"
 
-function ProjectModal({ children, open, onExited, ...rest }) {
+export default function ProjectModal({ children, open, onExited, ...rest }) {
   const [showModal, setShowModal] = useState(false);
+
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('xs'));
 
   useEffect(() => {
     if (open) {
@@ -24,8 +29,11 @@ function ProjectModal({ children, open, onExited, ...rest }) {
       open={showModal}
       onClose={startExitAnimation}
       onExited={onExitAnimationEnd}
-     >
-      <DialogContent>{children}</DialogContent>
+      fullScreen={fullScreen}
+      maxWidth="lg"
+      aria-labelledby="responsive-dialog-title"
+    >
+      {children}
     </Dialog>
   );
 }
@@ -33,5 +41,3 @@ function ProjectModal({ children, open, onExited, ...rest }) {
 ProjectModal.propTypes = {
   ...Dialog.propTypes
 };
-
-export default ProjectModal;

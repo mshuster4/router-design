@@ -1,17 +1,24 @@
 import React, { useRef} from 'react';
-import Landing from "./components/Landing";
-import Portfolio from "./pages/Portfolio";
-import NavBar from "./components/NavBar";
 import { NavHashLink as NavLink } from 'react-router-hash-link';
-import { Nav } from 'react-bootstrap';
+import NavBar from "./components/NavBar";
 import LogoLight from "./assets/images/ms-logo-light.png";
 import LogoDark from "./assets/images/ms-logo-dark.png";
+import Landing from "./components/Landing";
+import Portfolio from "./pages/Portfolio";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import useScrollSpy from 'react-use-scrollspy';
-import "./App.css"
+import styled from "styled-components";
+import "./App.css";
 
-const ScrollView = () => {
+const NavTabs = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+`;
+
+export default function ScrollView() {
 
   const sectionsRefs = [
     useRef(null),
@@ -25,7 +32,7 @@ const ScrollView = () => {
     offsetPx: -80,
   })
 
-  const setNavbg = (section) => {
+ const setNavbg = (section) => {
    if (section === 0) {
      return "nav-bg-landing"
    }
@@ -41,22 +48,20 @@ const ScrollView = () => {
 }
 
   return (
-
-    <div>
+     <div>
       <NavBar
-        className={setNavbg(activeSection)}
+        classes={{label: setNavbg(activeSection)}}
       >
-        <Nav>
-          <NavLink 
-              smooth
-              to="/#landing" 
-              activeClassName={activeSection === 0  ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}
-            >
-              <img id="logo" alt="ms-logo" src={activeSection === 0 ? LogoLight : LogoDark} />
-          </NavLink>
-       </Nav>
-       <Nav className="ml-auto" id="nav-items">
         <NavLink 
+            smooth
+            to="/#landing" 
+            activeClassName={activeSection === 0  ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}
+          >
+            <img id="logo" alt="ms-logo" src={activeSection === 0 ? LogoLight : LogoDark} />
+        </NavLink>
+       <NavTabs>
+        <NavLink 
+          pr={2}
           smooth
           to="/#portfolio" 
           activeClassName={activeSection === 1  ? "App-navigation-item App-navigation-item--active" : "App-navigation-item"}
@@ -78,7 +83,7 @@ const ScrollView = () => {
         >
         Contact
         </NavLink>
-     </Nav>
+     </NavTabs>
     </NavBar>
       <section ref={sectionsRefs[0]}>
         <Landing/>
@@ -93,8 +98,5 @@ const ScrollView = () => {
         <Contact/>
       </section>
     </div>
-      
     );
   }
-
-export default ScrollView;

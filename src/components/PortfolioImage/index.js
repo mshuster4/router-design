@@ -1,13 +1,7 @@
 import React from "react";
 import { ModalLink } from "react-router-modal-gallery";
-import { Col, Row } from "react-bootstrap"
 import { MDBMask, MDBView, MDBBtn, MDBIcon } from "mdbreact";
-import BlockPreview from "../../assets/images/block-party-preview.png";
-import ReadingPreview from "../../assets/images/reading-preview.png";
-import FriendPreview from "../../assets/images/friend-preview.png";
-import CampPreview from "../../assets/images/camp-preview.png";
-import BrewsPreview from "../../assets/images/brews-preview.png";
-import MongoPreview from "../../assets/images/mongo-preview.png";
+import Grid from '@material-ui/core/Grid';
 import projects from "../../projects.json";
 import "./style.css";
 
@@ -15,9 +9,9 @@ import "./style.css";
 const PortfolioImage = (props) => {
 
   return (
-    <Row>
+    <Grid container spacing={2}>
       {projects.map((project, i) => (
-        <Col key={project.id} xs={12} md={6} lg={4} className="mb-4 mt-4 mb-md-3 mt-md-3">
+        <Grid item xs={12} md={6} lg={4} className="mb-4 mt-4 mb-md-3 mt-md-3">
           <MDBView hover className="z-depth-1-half">
             <img className="img-fluid" src={props.images[i]} alt="preview"/>
               <MDBMask className="flex-center flex-column" overlay="black-strong">
@@ -29,9 +23,9 @@ const PortfolioImage = (props) => {
                 </ModalLink>
               </MDBMask>
           </MDBView>
-        </Col>
+        </Grid>
       ))}
-    </Row>
+    </Grid>
   );
  }
 

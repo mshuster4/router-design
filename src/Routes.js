@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from "./components/NavBar";
 import Portfolio from "./pages/Portfolio";
 import Project from "./components/Project";
 import ProjectModal from "./components/Modal"

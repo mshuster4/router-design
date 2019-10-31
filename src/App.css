@@ -4,11 +4,21 @@
   min-height: 100vh; 
 }
 
+header.MuiPaper-elevation4 {
+    box-shadow: -2px 3px 9px -1px rgba(183, 183, 183, 0.42), 
+                0px 4px 5px 0px rgba(0,0,0,0.14), 
+                0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+
 button.btn-outline-success,
 button.btn-outline-success:hover
  {
   border: 2px solid #32ca96 !important;
   color: #32ca96 !important;
+}
+
+a.App-navigation-item {
+   padding: 0 .5rem;
 }
 
 /* ==== NAVIGATION ===== */
@@ -117,4 +127,10 @@ button.btn-outline-success:hover
   color: white;
 }
 
+/* ===== RESPONSIVE ===== */
 
+@media (min-width: 576px) { 
+    a.App-navigation-item {
+    padding: 0 1rem;
+    }
+}
