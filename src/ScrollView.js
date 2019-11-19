@@ -3,7 +3,7 @@ import { NavHashLink as NavLink } from 'react-router-hash-link';
 import NavBar from "./components/NavBar";
 import LogoLight from "./assets/images/ms-logo-light.png";
 import LogoDark from "./assets/images/ms-logo-dark.png";
-import Landing from "./components/Landing";
+import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio";
 import About from "./components/About";
 import Contact from "./components/Contact";

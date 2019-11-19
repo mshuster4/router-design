@@ -81,13 +81,9 @@ export default function Project() {
 
  let { id } = useParams();
 
- console.log(id);
-
  const project = getProjectById(id);
 
  const images = getImagesById(id)
-
- console.log(images)
   
   return (
    <div>
@@ -110,11 +106,13 @@ export default function Project() {
        <Typography variant="body1">{project.role}</Typography>
        <Typography>Technologies Used</Typography>
        <List>
-        <ListItem>
+       {project.techsUsed.map(tech => (
+         <ListItem>
           <ListItemText>
-            {project.techsUsed}
+            {tech}
            </ListItemText>
           </ListItem>
+       ))}
         </List>
      </DialogContent>
    </div>
