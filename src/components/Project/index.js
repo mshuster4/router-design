@@ -104,8 +104,8 @@ export default function Project() {
       <DialogContent>
        <Typography variant="body1" gutterBottom>{project.description}</Typography>
        <Typography variant="body1">{project.role}</Typography>
-       <Typography>Technologies Used</Typography>
-       <List>
+       <Typography variant="h5">Technologies Used</Typography>
+       <List dense={true}>
        {project.techsUsed.map(tech => (
          <ListItem>
           <ListItemText>

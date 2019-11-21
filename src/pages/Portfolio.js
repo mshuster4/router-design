@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from "react-bootstrap"
+import Container from '@material-ui/core/Container';
 import PortfolioImage from '../components/PortfolioImage';
 import BlockPreview from "../assets/images/block-party-preview.png";
 import ReadingPreview from "../assets/images/reading-preview.png";

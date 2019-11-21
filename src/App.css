@@ -13,8 +13,8 @@ header.MuiPaper-elevation4 {
 button.btn-outline-success,
 button.btn-outline-success:hover
  {
-  border: 2px solid #32ca96 !important;
-  color: #32ca96 !important;
+  border: 2px solid #32cc99!important;
+  color: #32cc99!important;
 }
 
 a.App-navigation-item {
@@ -22,7 +22,7 @@ a.App-navigation-item {
 }
 
 .accent-color {
-  color: #31cb97;
+  color: #32cc99;
 }
 
 /* ==== NAVIGATION ===== */
